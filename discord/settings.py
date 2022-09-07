@@ -141,6 +141,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+ALLOWED_HOSTS = ['django-discord-clone.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS=[
     'https://vinicius8-djangopersonal-oerd6d398so.ws-us38.gitpod.io', 
