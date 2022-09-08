@@ -4,3 +4,4 @@ Pillow==9.2.0
 gunicorn
 psycopg2
 django-heroku  
+whitenoise  
