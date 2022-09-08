@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 
+import os
+import django_heroku
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -82,12 +85,25 @@ WSGI_APPLICATION = 'discord.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'default':{
+            'ENGINE': 'django.db.backends.postresql_psycopg2',
+            'NAME': 'd2p7sm12nhigrl',
+            'USER': 'ekqpdendctzfuq',
+            'PASSWORD': 'f8477cc1df4a4ecc5a5a05979ecf88722271390ca36da891df9fc055f5732be4'
+            'HOST' : 'ec2-44-207-253-50.compute-1.amazonaws.com',
+            'PORT': '5432'
+        }
 }
+
+
 
 
 # Password validation
@@ -124,7 +140,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
 
 MEDIA_URL = '/images/'
 
@@ -134,7 +150,15 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_URL = "/static/"
+django_heroku.settings(locals())
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
