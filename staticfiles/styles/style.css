@@ -1122,7 +1122,6 @@ a {
   font-weight: 500;
   position: relative;
 }
-
 .room__message > form > input::placeholder {
   color: var(--color-light-gray);
 }

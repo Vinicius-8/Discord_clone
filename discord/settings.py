@@ -86,12 +86,12 @@ WSGI_APPLICATION = 'discord.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # DATABASES = {
 #         'default':{
@@ -104,16 +104,16 @@ WSGI_APPLICATION = 'discord.wsgi.application'
 #         }
 # }
 
-DATABASES = {
-        'default':{
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'postgres',
-            'USER': 'postgres',
-            'PASSWORD': '1234abcd',
-            'HOST' : 'localhost',
-            'PORT': '5432'
-        }
-}
+# DATABASES = {
+#         'default':{
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': 'postgres',
+#             'USER': 'postgres',
+#             'PASSWORD': '1234abcd',
+#             'HOST' : 'localhost',
+#             'PORT': '5432'
+#         }
+# }
 
 
 
@@ -182,4 +182,5 @@ CSRF_TRUSTED_ORIGINS=[
     'https://vinicius8-djangopersonal-oerd6d398so.ws-us38.gitpod.io', 
     'https://8000-vinicius8-djangopersonal-oerd6d398so.ws-us38.gitpod.io',
     'https://8000-vinicius8-djangopersonal-oerd6d398so.ws-us39a.gitpod.io',
-    'https://8000-vinicius8-djangopersonal-oerd6d398so.ws-us40.gitpod.io']
+    'https://8000-vinicius8-djangopersonal-oerd6d398so.ws-us40.gitpod.io',
+    'https://8000-vinicius8-discordclone-iurvw9d0yc2.ws-us64.gitpod.io']

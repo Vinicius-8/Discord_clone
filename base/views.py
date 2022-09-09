@@ -73,21 +73,18 @@ def logout_user(request):
 
 def register_page(request):
     form = MyUserCreationForm()
-    print('ghotst')
     if request.method == 'POST':
-        print('ghotst22')
         form = MyUserCreationForm(request.POST)
+    
         if form.is_valid():
             user = form.save(commit=False)
             user.username = user.username.lower()
-            print('CHegooo')
             x = user.save()
-            print('mister x : ' + x)
             login(request, user)
             return redirect('home')
         else:
-            print('shit is invalid '+ form)
-            messages.error(request, 'Something went wrong during registration')
+            messages.error(request, 'Fail! too easy password')
+    
         
     return render(request, 'base/login_register.html', {'form':form})
 
