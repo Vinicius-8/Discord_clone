@@ -93,16 +93,28 @@ WSGI_APPLICATION = 'discord.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#         'default':{
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#             'NAME': 'd2p7sm12nhigrl',
+#             'USER': 'ekqpdendctzfuq',
+#             'PASSWORD': 'f8477cc1df4a4ecc5a5a05979ecf88722271390ca36da891df9fc055f5732be4',
+#             'HOST' : 'ec2-44-207-253-50.compute-1.amazonaws.com',
+#             'PORT': '5432'
+#         }
+# }
+
 DATABASES = {
         'default':{
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'd2p7sm12nhigrl',
-            'USER': 'ekqpdendctzfuq',
-            'PASSWORD': 'f8477cc1df4a4ecc5a5a05979ecf88722271390ca36da891df9fc055f5732be4',
-            'HOST' : 'ec2-44-207-253-50.compute-1.amazonaws.com',
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'postgres',
+            'USER': 'postgres',
+            'PASSWORD': '1234abcd',
+            'HOST' : 'localhost',
             'PORT': '5432'
         }
 }
+
 
 
 
@@ -164,7 +176,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ALLOWED_HOSTS = ['django-discord-clone.herokuapp.com']
+ALLOWED_HOSTS = ['django-discord-clone.herokuapp.com', '*']
 
 CSRF_TRUSTED_ORIGINS=[
     'https://vinicius8-djangopersonal-oerd6d398so.ws-us38.gitpod.io', 
