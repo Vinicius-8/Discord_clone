@@ -86,23 +86,23 @@ WSGI_APPLICATION = 'discord.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
-#         'default':{
-#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#             'NAME': 'd2p7sm12nhigrl',
-#             'USER': 'ekqpdendctzfuq',
-#             'PASSWORD': 'f8477cc1df4a4ecc5a5a05979ecf88722271390ca36da891df9fc055f5732be4',
-#             'HOST' : 'ec2-44-207-253-50.compute-1.amazonaws.com',
-#             'PORT': '5432'
-#         }
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
+
+DATABASES = {
+        'default':{
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'd2p7sm12nhigrl',
+            'USER': 'ekqpdendctzfuq',
+            'PASSWORD': 'f8477cc1df4a4ecc5a5a05979ecf88722271390ca36da891df9fc055f5732be4',
+            'HOST' : 'ec2-44-207-253-50.compute-1.amazonaws.com',
+            'PORT': '5432'
+        }
+}
 
 # DATABASES = {
 #         'default':{

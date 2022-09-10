@@ -19,6 +19,21 @@
         list-style: none;
         padding: 8px;
       }
+
+      
+      .fade-out {
+        animation: fadeOut ease 7s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
     </style>
 
   </head>
@@ -29,7 +44,7 @@
 
 
     {% if messages %}
-    <ul class="messages" >
+    <ul class="messages fade-out" >
         {% for message in messages %}
         <li>{{message}} </li>
         {% endfor %}
