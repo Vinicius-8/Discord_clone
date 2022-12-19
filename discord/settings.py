@@ -15,6 +15,8 @@ from pathlib import Path
 import os
 import django_heroku
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure--h5u385p^a6tqnbr-x06$lkb(2+=g%ey0s305s%+0amo*and99'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -96,10 +99,10 @@ WSGI_APPLICATION = 'discord.wsgi.application'
 DATABASES = {
         'default':{
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'd2p7sm12nhigrl',
-            'USER': 'ekqpdendctzfuq',
-            'PASSWORD': 'f8477cc1df4a4ecc5a5a05979ecf88722271390ca36da891df9fc055f5732be4',
-            'HOST' : 'ec2-44-207-253-50.compute-1.amazonaws.com',
+            'NAME': 'jfhhcsyv',
+            'USER': 'jfhhcsyv',
+            'PASSWORD': 'cQCSqdydjhVMtl37_6wYjQpxoYK2HGri',
+            'HOST' : 'babar.db.elephantsql.com',
             'PORT': '5432'
         }
 }
